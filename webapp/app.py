@@ -33,8 +33,8 @@ def prediction(filename):
     image_result = test_single_image(full_name)
     return render_template(
         'result.html',
-        image='/'+full_name,
-        main_prediction='/'+image_result
+        image='/' + full_name,
+        main_prediction='/' + image_result
     )
 
 

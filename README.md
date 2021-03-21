@@ -15,10 +15,12 @@ source venv/bin/activate (on Linux)
 pip install -r requirements.txt
 cd webapp/
 ```
-* Run server `python manage.py runserver`
+* Run server `python app.py`
 * Point your web browser to http://localhost:5000/
 
 ## Neural network module
+* Don't forget install dependencies from [local run](#local-run)
+step
 * Dataset structure in project hierarchy:
 ```
 face_mask_detector
