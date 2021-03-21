@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Face mask detection</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+<div class="d-flex align-items-center min-vh-100">
+    <div class="container text-center">
+        <h1>Система распознавания наличия медицинской маски на фото человека</h1>
+        <br/>
+
+        <form method="post" action="{{ url_for('upload') }}" enctype=multipart/form-data>
+            <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' name="file" onchange="readURL(this);"/>
+                <div class="drag-text">
+                    <h3>Выберите фото</h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="Ваш снимок"/>
+                <div class="image-title-wrap">
+
+                    <input type="submit" class="sender" value="Классифицировать" style="margin-right:5px;"/>
+
+                    <br/>
+                    <button type="button" onclick="removeUpload()" class="remove-image">Удалить <span
+                            class="image-title">снимок</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="./static/script.js"></script>
+</body>
+</html>
